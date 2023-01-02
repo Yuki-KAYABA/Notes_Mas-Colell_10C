@@ -5,8 +5,8 @@ date: "1/2/2023"
 site: bookdown::bookdown_site
 output:
   bookdown::gitbook: default
-output_dir: docs
-bookdown::gitbook: default
+#output_dir: docs
+#bookdown::gitbook: default
 ---
 
 ```{r setup, include=FALSE}
@@ -100,6 +100,7 @@ $$
 
 ## Comparative Statics
 
+- 比較静学は実証IOでもよく使う概念（外性パラメータの変化が経済厚生に与えるインパクトを反実仮想）
 - It is often of interest to determine how a change in underlying market conditions affects the equilibrium outcome of a competitive market.
 - Generally, compare outcomes that results from changes in exogenous parameters.
   - consumer's preferences are affected by a vector of exogenous parameters $\alpha \in \mathbb{R}^{M}$, so that the utility function $\phi_{i}(\cdot)$ can be written as $\phi_{i}(x_{i}, \alpha)$.
@@ -112,6 +113,20 @@ $$
 c'_{j}(q^{*}_{j}, \beta) = \hat{p}_{j}(p^{*}, t) \quad j = 1, ..., J \\
 \sum^{I}_{i = 1}x^{*}_{i} = \sum^{J}_{j = 1}q^{*}_{j} 
 $$
+
+# 10.D The Fundamental Welfare Theorems in a Partial Equilibrium Context
+
+- 一般均衡と同じように、部分均衡においても厚生経済学の第一定理、第二定理が成立する。
+- ただし、効用が準線形であることが必要。
+
+## The First Fundamental Theorem of Welfare Economics
+
+**Proposition 10.D.1 (The First Fundamental Theorem of Welfare Economics)**
+
+If the price $p^{*}$ and allocation $(x^{*}_{1}, ... x^{*}_{I}, q^{*}_{1}, ..., q^{*}_{J})$ constitute a competitive equilibrium, then this allocation is Pareto optimal.
+
+- When consumer preferences are quasilinear, the boundary of the economy's utility possibility set is linear and all points in this boundary are associated with consumption allocations that differ only in distribution of the numerarire among consumers.
+
 
 
 
