@@ -127,6 +127,11 @@ If the price $p^{*}$ and allocation $(x^{*}_{1}, ... x^{*}_{I}, q^{*}_{1}, ..., 
 
 - When consumer preferences are quasilinear, the boundary of the economy's utility possibility set is linear and all points in this boundary are associated with consumption allocations that differ only in distribution of the numerarire among consumers.
 
+## The Second Fundamental Theorem of Welfare Economics
+
+**Proposition 10.D.2 (The Second Fundamental Theorem of Welfare Economics)**
+
+For any Pareto optimal levels of utility $(u^{*}_{1}, ..., u^{*}_{I})$, there are transfers of the numeraire commodity $(T_{1}, ..., T_{I})$ satisfying $\sum_{i}T_{i} = 0$, such that a competitive equilibrium reached from the endowments $(\omega_{m1} + T_{1}, ..., \omega_{mI} + T_{I})$ yields precisely the utilities $u^{*}_{1}, ..., u^{*}_{I}$.
 
 
 
