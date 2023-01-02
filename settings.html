@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Settings | Notes:Mas-Colell Chap.10.C</title>
-  <meta name="description" content="2 Settings | Notes:Mas-Colell Chap.10.C" />
+  <title>2 Settings | Notes: Mas-Colell Chap.10.C</title>
+  <meta name="description" content="2 Settings | Notes: Mas-Colell Chap.10.C" />
   <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Settings | Notes:Mas-Colell Chap.10.C" />
+  <meta property="og:title" content="2 Settings | Notes: Mas-Colell Chap.10.C" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Settings | Notes:Mas-Colell Chap.10.C" />
+  <meta name="twitter:title" content="2 Settings | Notes: Mas-Colell Chap.10.C" />
   
   
   
@@ -73,6 +73,7 @@
 <li class="chapter" data-level="2.1" data-path="settings.html"><a href="settings.html#demand-side"><i class="fa fa-check"></i><b>2.1</b> Demand Side</a></li>
 <li class="chapter" data-level="2.2" data-path="settings.html"><a href="settings.html#supply-side"><i class="fa fa-check"></i><b>2.2</b> Supply Side</a></li>
 <li class="chapter" data-level="2.3" data-path="settings.html"><a href="settings.html#competitive-equilibria"><i class="fa fa-check"></i><b>2.3</b> Competitive Equilibria</a></li>
+<li class="chapter" data-level="2.4" data-path="settings.html"><a href="settings.html#comparative-statics"><i class="fa fa-check"></i><b>2.4</b> Comparative Statics</a></li>
 </ul></li>
 </ul>
 
@@ -83,7 +84,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><a href="Notes:Mas-Colell" class="uri">Notes:Mas-Colell</a> Chap.10.C</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notes: Mas-Colell Chap.10.C</a>
           </h1>
         </div>
 
@@ -143,14 +144,34 @@ which has the necessary and sufficient FOC
 <span class="math display">\[
 \phi&#39;_{i}(x^{*}_{i}) \leq p^{*}, \quad \text{with equality if} \quad x^{*}_{i} &gt; 0.
 \]</span></p></li>
-<li><p>Market Clearing: If the market for good <span class="math inline">\(l\)</span> claers, then the market for the numeraire also clears (Lemma 10.B.1). Thus we need only check that the market for good <span class="math inline">\(l\)</span> clears.</p></li>
+<li><p>Market Clearing: If the market for good <span class="math inline">\(l\)</span> clears, then the market for the numeraire also clears (Lemma 10.B.1). Thus we need only check that the market for good <span class="math inline">\(l\)</span> clears.</p></li>
 <li><p>Hence, the allocation <span class="math inline">\((x^{*}_{1}, ... x^{*}_{I}, q^{*}_{1}, ..., q^{*}_{J})\)</span> and the price <span class="math inline">\(p^{*}\)</span> constitute a competitive equilibrium if and only if:
 <span class="math display">\[
 p^{*} \leq c&#39;_{j}(q^{*}_{j}), \quad \text{with equality if} \quad q^{*}_{j} &gt; 0 \\
 \phi&#39;_{i}(x^{*}_{i}) \leq p^{*}, \quad \text{with equality if} \quad x^{*}_{i} &gt; 0 \\
 \sum^{I}_{i = 1}x^{*}_{i} = \sum^{J}_{j = 1}q^{*}_{j}
 \]</span></p></li>
+<li><p>The above equilibrium conditions have a property: the equilibrium allocation and price are independent of the distribution of endowments and ownership shares.</p></li>
+<li><p>This property comes from the quasilinear form of consumer preferences.</p></li>
 </ul>
+</div>
+<div id="comparative-statics" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Comparative Statics<a href="settings.html#comparative-statics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>It is often of interest to determine how a change in underlying market conditions affects the equilibrium outcome of a competitive market.</li>
+<li>Generally, compare outcomes that results from changes in exogenous parameters.
+<ul>
+<li>consumer’s preferences are affected by a vector of exogenous parameters <span class="math inline">\(\alpha \in \mathbb{R}^{M}\)</span>, so that the utility function <span class="math inline">\(\phi_{i}(\cdot)\)</span> can be written as <span class="math inline">\(\phi_{i}(x_{i}, \alpha)\)</span>.</li>
+<li>each firm’s technology may be affected by a vector of exogenous parameters <span class="math inline">\(\beta \in \mathbb{R}^{S}\)</span>, so that the cost function <span class="math inline">\(c_{j}(\cdot)\)</span> can be written as <span class="math inline">\(c_{j}(q_{j}, \beta)\)</span>.</li>
+<li>consumers and firms may face taxes or subsidies that may make the effective price paid or received differ from the market price <span class="math inline">\(p\)</span>, so that the effective price paid by consumer <span class="math inline">\(i\)</span> and the effective price received by firm <span class="math inline">\(j\)</span> given tax and subsidy parameters <span class="math inline">\(t \in \mathbb{R}^{K}\)</span> can be written as <span class="math inline">\(\hat{p}_{i}(p, t)\)</span> and <span class="math inline">\(\hat{p}_{j}(p, t)\)</span>, respectively.</li>
+</ul></li>
+<li>For given values <span class="math inline">\((\alpha, \beta, t)\)</span> of the parameters, the <span class="math inline">\(I + J\)</span> equilibrium quantities <span class="math inline">\((x^{*}_{1}, ... x^{*}_{I}, q^{*}_{1}, ..., q^{*}_{J})\)</span> and the equilibrium price <span class="math inline">\(p^{*}\)</span> are determined by the following <span class="math inline">\(I + J + 1\)</span> equiations:</li>
+</ul>
+<p><span class="math display">\[
+\phi&#39;_{i}(x^{*}_{i}, \alpha) = p^{*} \quad i = 1, ..., I.  \\
+c&#39;_{j}(q^{*}_{j}, \beta) = \hat{p}_{j}(p^{*}, t) \quad j = 1, ..., J \\
+\sum^{I}_{i = 1}x^{*}_{i} = \sum^{J}_{j = 1}q^{*}_{j}
+\]</span></p>
 </div>
 </div>
             </section>

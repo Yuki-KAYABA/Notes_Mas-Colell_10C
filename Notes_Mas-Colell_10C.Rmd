@@ -1,7 +1,7 @@
 ---
-title: "Notes:Mas-Colell Chap.10.C"
+title: "Notes: Mas-Colell Chapter 10 Competitive Markets"
 author: "Yuki KAYABA"
-date: "1/1/2023"
+date: "1/2/2023"
 site: bookdown::bookdown_site
 output:
   bookdown::gitbook: default
@@ -14,6 +14,15 @@ knitr::opts_chunk$set(echo = TRUE)
 library(bookdown)
 ```
 
+# 10.A Introduction
+
+- To formally introduce and study two key concepts, the notions of _Pareto optimality_ and _competitive equilibrium_.
+- To develop a somewhat special but analytically very tractable context for the study of market equilibrium, the _partial equilibrium model_.
+
+# 10.B Pareto Optimality and Competitive Equilibria
+
+一旦スキップ
+
 # 10.C Parial Equilibrium Competitive Analysis
 
 実証IOは基本的に特定のマーケットにフォーカスした部分均衡分析であるため考え方を整理しておく。
@@ -25,8 +34,6 @@ consumer's total expenditure, only a small fraction of any additional doller of 
 - With similarly dispersed substitution effects, the small size of the market under study should lead the prices of other goods to be appoximately unaffected by changes in this market.
 
 →要は他の市場における財との所得効果・代替効果が小さく、他の市場の需要・価格に影響をおよぼさない場合部分均衡分析が正当化される。
-
-# Settings
 
 ## Demand Side
 
@@ -76,7 +83,7 @@ $$
 \phi'_{i}(x^{*}_{i}) \leq p^{*}, \quad \text{with equality if} \quad x^{*}_{i} > 0.
 $$
 
-- Market Clearing: If the market for good $l$ claers, then the market for the numeraire also clears (Lemma 10.B.1). Thus we need only check that the market for good $l$ clears.
+- Market Clearing: If the market for good $l$ clears, then the market for the numeraire also clears (Lemma 10.B.1). Thus we need only check that the market for good $l$ clears.
 
 - Hence, the allocation $(x^{*}_{1}, ... x^{*}_{I}, q^{*}_{1}, ..., q^{*}_{J})$ and the price $p^{*}$ constitute a competitive equilibrium if and only if:
 $$
@@ -85,9 +92,23 @@ p^{*} \leq c'_{j}(q^{*}_{j}), \quad \text{with equality if} \quad q^{*}_{j} > 0 
 \sum^{I}_{i = 1}x^{*}_{i} = \sum^{J}_{j = 1}q^{*}_{j} 
 $$
 
+- The above equilibrium conditions have a property: the equilibrium allocation and price are independent of the distribution of endowments and ownership shares.
+- This property comes from the quasilinear form of consumer preferences.
 
+## Comparative Statics
 
+- It is often of interest to determine how a change in underlying market conditions affects the equilibrium outcome of a competitive market.
+- Generally, compare outcomes that results from changes in exogenous parameters.
+  - consumer's preferences are affected by a vector of exogenous parameters $\alpha \in \mathbb{R}^{M}$, so that the utility function $\phi_{i}(\cdot)$ can be written as $\phi_{i}(x_{i}, \alpha)$.
+  - each firm's technology may be affected by a vector of exogenous parameters $\beta \in \mathbb{R}^{S}$, so that the cost function $c_{j}(\cdot)$ can be written as $c_{j}(q_{j}, \beta)$.
+  - consumers and firms may face taxes or subsidies that may make the effective price paid or received differ from the market price $p$, so that the effective price paid by consumer $i$ and the effective price received by firm $j$ given tax and subsidy parameters $t \in \mathbb{R}^{K}$ can be written as $\hat{p}_{i}(p, t)$ and $\hat{p}_{j}(p, t)$, respectively.
+- For given values $(\alpha, \beta, t)$ of the parameters, the $I + J$ equilibrium quantities $(x^{*}_{1}, ... x^{*}_{I}, q^{*}_{1}, ..., q^{*}_{J})$ and the equilibrium price $p^{*}$ are determined by the following $I + J + 1$ equiations:
 
+$$
+\phi'_{i}(x^{*}_{i}, \alpha) = p^{*} \quad i = 1, ..., I.  \\
+c'_{j}(q^{*}_{j}, \beta) = \hat{p}_{j}(p^{*}, t) \quad j = 1, ..., J \\
+\sum^{I}_{i = 1}x^{*}_{i} = \sum^{J}_{j = 1}q^{*}_{j} 
+$$
 
 
 
