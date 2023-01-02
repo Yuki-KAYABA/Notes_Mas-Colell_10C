@@ -23,18 +23,81 @@ Partial equilibrium analysis is justified by the following reasons:
 - When the expenditure on the good under study is a small portion of a
 consumer's total expenditure, only a small fraction of any additional doller of wealth will be spent on this good; consequently, we can expect wealth effects for it to be small.
 - With similarly dispersed substitution effects, the small size of the market under study should lead the prices of other goods to be appoximately unaffected by changes in this market.
+
 →要は他の市場における財との所得効果・代替効果が小さく、他の市場の需要・価格に影響をおよぼさない場合部分均衡分析が正当化される。
 
 # Settings
+
+## Demand Side
 
 - Each consumer $i = 1, ..., I$ has a utility function: 
 $$
 u(x_{i}, m_{i}) = m_{i} + \phi_{i}(x_{i})
 $$
+where $x_{i}$ is consumer $i$'s consumption of good $l$, the good whose market is under study, and $m_{i}$ is the consumption of the numeraire.
+
 →上記justificationの通り、所得効果のないモデルを考えたいので準線形の効用関数を考える。
 
-- $\phi^{'}{i}(x{i}) > 0$ and $\phi^{''}{i}(x{i}) < 0$ at all $x_{i} \geq 0$.
-- Normalize 
+- $\phi'_{i}(x_{i}) > 0$ and $\phi''_{i}(x_{i}) < 0$ at all $x_{i} \geq 0$.
+- Normalize $\phi_{i}(x_{i}) = 0$.
+- Let $p$ denote the price of good $l$ and the price of the numeraire is normalized to 1.
+- Consumer $i$'s initial endowment of the numeraire is the scalar $\omega_{mi} > 0$ and let $\omega_{m} = \sum_{i}\omega_{mi}$.
+
+## Supply Side
+
+- Each firm $j = 1, ..., J$ in this two-good economy is able to produce good $l$ from good $m$.
+- Cost function: $c_{l}(q_{j})$, the amount of the numeraire required by firm $j$ to produce $q_{j}$ units of good $l$.
+- $c_{j}(\cdot)$ is twice differentiable, with $c'_{j}(q_{j}) > 0$ and $c''_{j}(q_{j}) > 0$ at all $q_{j} \geq 0$.
+- Let $z_{j}$ denote firm $j$'s use of good $m$ as an input.
+- Production set: $Y_{j} = \{(-z_{j}, q_{j}): q_{j} \geq 0 \quad \text{and} \quad z_{j} \geq c_{j}(q_{j})\}$.
+- There is no initial endowment of good $l$, so that all amounts consumerd must be produced by the firms.
+
+## Competitive Equilibria
+
+競争均衡については10.B.3参照。ざっくりいえば①各企業の利潤最大化、②各消費者の効用最大化、③
+マーケットクリアリングを満たす配分および価格を指す。
+
+- Profit maximization: given the price $p^{*}$ for good $l$, firm $j$'s equilibrium output level $q^{*}_{j}$ must solve
+$$
+\max_{q_{j} \geq 0} p^{*}q_{j} - c_{j}(q_{j}),
+$$
+which has the necessary and sufficient FOC
+$$
+p^{*} \leq c'_{j}(q^{*}_{j}), \quad \text{with equality if} \quad q^{*}_{j} > 0.
+$$
+
+- Utility maximization: consumer $i$'s equilibrium consumption vector $(m^{*}_{i}, x^{*}_{i})$ must solve
+$$
+\max_{m_{i} \in \mathbb{R}, x_{i} \in \mathbb{R}_{+}} m_{i} + \phi_{i}(x_{i}) \\
+\text{s.t.} \quad m_{i} + p^{*}x_{i} \leq \omega_{mi} + \sum^{J}_{j = 1}\theta_{ij}(p^{*}q^{*}_{j} - c_{j}(q^{*}_{j})).
+$$
+which has the necessary and sufficient FOC
+$$
+\phi'_{i}(x^{*}_{i}) \leq p^{*}, \quad \text{with equality if} \quad x^{*}_{i} > 0.
+$$
+
+- Market Clearing: If the market for good $l$ claers, then the market for the numeraire also clears (Lemma 10.B.1). Thus we need only check that the market for good $l$ clears.
+
+- Hence, the allocation $(x^{*}_{1}, ... x^{*}_{I}, q^{*}_{1}, ..., q^{*}_{J})$ and the price $p^{*}$ constitute a competitive equilibrium if and only if:
+$$
+p^{*} \leq c'_{j}(q^{*}_{j}), \quad \text{with equality if} \quad q^{*}_{j} > 0 \\
+\phi'_{i}(x^{*}_{i}) \leq p^{*}, \quad \text{with equality if} \quad x^{*}_{i} > 0 \\
+\sum^{I}_{i = 1}x^{*}_{i} = \sum^{J}_{j = 1}q^{*}_{j} 
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

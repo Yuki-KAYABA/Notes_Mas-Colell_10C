@@ -68,7 +68,12 @@
 
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="c-parial-equilibrium-competitive-analysis.html"><a href="c-parial-equilibrium-competitive-analysis.html"><i class="fa fa-check"></i><b>1</b> 10.C Parial Equilibrium Competitive Analysis</a></li>
-<li class="chapter" data-level="2" data-path="settings.html"><a href="settings.html"><i class="fa fa-check"></i><b>2</b> Settings</a></li>
+<li class="chapter" data-level="2" data-path="settings.html"><a href="settings.html"><i class="fa fa-check"></i><b>2</b> Settings</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="settings.html"><a href="settings.html#demand-side"><i class="fa fa-check"></i><b>2.1</b> Demand Side</a></li>
+<li class="chapter" data-level="2.2" data-path="settings.html"><a href="settings.html#supply-side"><i class="fa fa-check"></i><b>2.2</b> Supply Side</a></li>
+<li class="chapter" data-level="2.3" data-path="settings.html"><a href="settings.html#competitive-equilibria"><i class="fa fa-check"></i><b>2.3</b> Competitive Equilibria</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -88,15 +93,65 @@
             <section class="normal" id="section-">
 <div id="settings" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">2</span> Settings<a href="settings.html#settings" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="demand-side" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Demand Side<a href="settings.html#demand-side" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li><p>Each consumer <span class="math inline">\(i = 1, ..., I\)</span> has a utility function:
+<li>Each consumer <span class="math inline">\(i = 1, ..., I\)</span> has a utility function:
 <span class="math display">\[
 u(x_{i}, m_{i}) = m_{i} + \phi_{i}(x_{i})
 \]</span>
-→上記justificationの通り、所得効果のないモデルを考えたいので準線形の効用関数を考える。</p></li>
-<li><p><span class="math inline">\(\phi^{&#39;}{i}(x{i}) &gt; 0\)</span> and <span class="math inline">\(\phi^{&#39;&#39;}{i}(x{i}) &lt; 0\)</span> at all <span class="math inline">\(x_{i} \geq 0\)</span>.</p></li>
-<li><p>Normalize</p></li>
+where <span class="math inline">\(x_{i}\)</span> is consumer <span class="math inline">\(i\)</span>’s consumption of good <span class="math inline">\(l\)</span>, the good whose market is under study, and <span class="math inline">\(m_{i}\)</span> is the consumption of the numeraire.</li>
 </ul>
+<p>→上記justificationの通り、所得効果のないモデルを考えたいので準線形の効用関数を考える。</p>
+<ul>
+<li><span class="math inline">\(\phi&#39;_{i}(x_{i}) &gt; 0\)</span> and <span class="math inline">\(\phi&#39;&#39;_{i}(x_{i}) &lt; 0\)</span> at all <span class="math inline">\(x_{i} \geq 0\)</span>.</li>
+<li>Normalize <span class="math inline">\(\phi_{i}(x_{i}) = 0\)</span>.</li>
+<li>Let <span class="math inline">\(p\)</span> denote the price of good <span class="math inline">\(l\)</span> and the price of the numeraire is normalized to 1.</li>
+<li>Consumer <span class="math inline">\(i\)</span>’s initial endowment of the numeraire is the scalar <span class="math inline">\(\omega_{mi} &gt; 0\)</span> and let <span class="math inline">\(\omega_{m} = \sum_{i}\omega_{mi}\)</span>.</li>
+</ul>
+</div>
+<div id="supply-side" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Supply Side<a href="settings.html#supply-side" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Each firm <span class="math inline">\(j = 1, ..., J\)</span> in this two-good economy is able to produce good <span class="math inline">\(l\)</span> from good <span class="math inline">\(m\)</span>.</li>
+<li>Cost function: <span class="math inline">\(c_{l}(q_{j})\)</span>, the amount of the numeraire required by firm <span class="math inline">\(j\)</span> to produce <span class="math inline">\(q_{j}\)</span> units of good <span class="math inline">\(l\)</span>.</li>
+<li><span class="math inline">\(c_{j}(\cdot)\)</span> is twice differentiable, with <span class="math inline">\(c&#39;_{j}(q_{j}) &gt; 0\)</span> and <span class="math inline">\(c&#39;&#39;_{j}(q_{j}) &gt; 0\)</span> at all <span class="math inline">\(q_{j} \geq 0\)</span>.</li>
+<li>Let <span class="math inline">\(z_{j}\)</span> denote firm <span class="math inline">\(j\)</span>’s use of good <span class="math inline">\(m\)</span> as an input.</li>
+<li>Production set: <span class="math inline">\(Y_{j} = \{(-z_{j}, q_{j}): q_{j} \geq 0 \quad \text{and} \quad z_{j} \geq c_{j}(q_{j})\}\)</span>.</li>
+<li>There is no initial endowment of good <span class="math inline">\(l\)</span>, so that all amounts consumerd must be produced by the firms.</li>
+</ul>
+</div>
+<div id="competitive-equilibria" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Competitive Equilibria<a href="settings.html#competitive-equilibria" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>競争均衡については10.B.3参照。ざっくりいえば①各企業の利潤最大化、②各消費者の効用最大化、③
+マーケットクリアリングを満たす配分および価格を指す。</p>
+<ul>
+<li><p>Profit maximization: given the price <span class="math inline">\(p^{*}\)</span> for good <span class="math inline">\(l\)</span>, firm <span class="math inline">\(j\)</span>’s equilibrium output level <span class="math inline">\(q^{*}_{j}\)</span> must solve
+<span class="math display">\[
+\max_{q_{j} \geq 0} p^{*}q_{j} - c_{j}(q_{j}),
+\]</span>
+which has the necessary and sufficient FOC
+<span class="math display">\[
+p^{*} \leq c&#39;_{j}(q^{*}_{j}), \quad \text{with equality if} \quad q^{*}_{j} &gt; 0.
+\]</span></p></li>
+<li><p>Utility maximization: consumer <span class="math inline">\(i\)</span>’s equilibrium consumption vector <span class="math inline">\((m^{*}_{i}, x^{*}_{i})\)</span> must solve
+<span class="math display">\[
+\max_{m_{i} \in \mathbb{R}, x_{i} \in \mathbb{R}_{+}} m_{i} + \phi_{i}(x_{i}) \\
+\text{s.t.} \quad m_{i} + p^{*}x_{i} \leq \omega_{mi} + \sum^{J}_{j = 1}\theta_{ij}(p^{*}q^{*}_{j} - c_{j}(q^{*}_{j})).
+\]</span>
+which has the necessary and sufficient FOC
+<span class="math display">\[
+\phi&#39;_{i}(x^{*}_{i}) \leq p^{*}, \quad \text{with equality if} \quad x^{*}_{i} &gt; 0.
+\]</span></p></li>
+<li><p>Market Clearing: If the market for good <span class="math inline">\(l\)</span> claers, then the market for the numeraire also clears (Lemma 10.B.1). Thus we need only check that the market for good <span class="math inline">\(l\)</span> clears.</p></li>
+<li><p>Hence, the allocation <span class="math inline">\((x^{*}_{1}, ... x^{*}_{I}, q^{*}_{1}, ..., q^{*}_{J})\)</span> and the price <span class="math inline">\(p^{*}\)</span> constitute a competitive equilibrium if and only if:
+<span class="math display">\[
+p^{*} \leq c&#39;_{j}(q^{*}_{j}), \quad \text{with equality if} \quad q^{*}_{j} &gt; 0 \\
+\phi&#39;_{i}(x^{*}_{i}) \leq p^{*}, \quad \text{with equality if} \quad x^{*}_{i} &gt; 0 \\
+\sum^{I}_{i = 1}x^{*}_{i} = \sum^{J}_{j = 1}q^{*}_{j}
+\]</span></p></li>
+</ul>
+</div>
 </div>
             </section>
 
