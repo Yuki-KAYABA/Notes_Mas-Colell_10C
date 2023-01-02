@@ -16,12 +16,15 @@ library(bookdown)
 
 # 10.A Introduction
 
+## Goal of this chapeter
 - To formally introduce and study two key concepts, the notions of _Pareto optimality_ and _competitive equilibrium_.
 - To develop a somewhat special but analytically very tractable context for the study of market equilibrium, the _partial equilibrium model_.
 
+部分均衡を重点的に確認したいので序盤のパレート最適と競争均衡の定義はスキップ（必要に応じて読み直す）。
+
 # 10.B Pareto Optimality and Competitive Equilibria
 
-一旦スキップ
+よくある（コアミクロでやるような）パレート最適と競争均衡の定義なので一旦スキップ。
 
 # 10.C Parial Equilibrium Competitive Analysis
 
