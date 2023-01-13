@@ -71,12 +71,16 @@
 <ul>
 <li class="chapter" data-level="1.1" data-path="a-introduction.html"><a href="a-introduction.html#goal-of-this-chapeter"><i class="fa fa-check"></i><b>1.1</b> Goal of this chapeter</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="b-pareto-optimality-and-competitive-equilibria.html"><a href="b-pareto-optimality-and-competitive-equilibria.html"><i class="fa fa-check"></i><b>2</b> 10.B Pareto Optimality and Competitive Equilibria</a></li>
+<li class="chapter" data-level="2" data-path="b-pareto-optimality-and-competitive-equilibria.html"><a href="b-pareto-optimality-and-competitive-equilibria.html"><i class="fa fa-check"></i><b>2</b> 10.B Pareto Optimality and Competitive Equilibria</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="b-pareto-optimality-and-competitive-equilibria.html"><a href="b-pareto-optimality-and-competitive-equilibria.html#pareto-optimality"><i class="fa fa-check"></i><b>2.1</b> Pareto Optimality</a></li>
+<li class="chapter" data-level="2.2" data-path="b-pareto-optimality-and-competitive-equilibria.html"><a href="b-pareto-optimality-and-competitive-equilibria.html#competitive-equilibria"><i class="fa fa-check"></i><b>2.2</b> Competitive Equilibria</a></li>
+</ul></li>
 <li class="chapter" data-level="3" data-path="c-parial-equilibrium-competitive-analysis.html"><a href="c-parial-equilibrium-competitive-analysis.html"><i class="fa fa-check"></i><b>3</b> 10.C Parial Equilibrium Competitive Analysis</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="c-parial-equilibrium-competitive-analysis.html"><a href="c-parial-equilibrium-competitive-analysis.html#demand-side"><i class="fa fa-check"></i><b>3.1</b> Demand Side</a></li>
 <li class="chapter" data-level="3.2" data-path="c-parial-equilibrium-competitive-analysis.html"><a href="c-parial-equilibrium-competitive-analysis.html#supply-side"><i class="fa fa-check"></i><b>3.2</b> Supply Side</a></li>
-<li class="chapter" data-level="3.3" data-path="c-parial-equilibrium-competitive-analysis.html"><a href="c-parial-equilibrium-competitive-analysis.html#competitive-equilibria"><i class="fa fa-check"></i><b>3.3</b> Competitive Equilibria</a></li>
+<li class="chapter" data-level="3.3" data-path="c-parial-equilibrium-competitive-analysis.html"><a href="c-parial-equilibrium-competitive-analysis.html#competitive-equilibria-1"><i class="fa fa-check"></i><b>3.3</b> Competitive Equilibria</a></li>
 <li class="chapter" data-level="3.4" data-path="c-parial-equilibrium-competitive-analysis.html"><a href="c-parial-equilibrium-competitive-analysis.html#comparative-statics"><i class="fa fa-check"></i><b>3.4</b> Comparative Statics</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="d-the-fundamental-welfare-theorems-in-a-partial-equilibrium-context.html"><a href="d-the-fundamental-welfare-theorems-in-a-partial-equilibrium-context.html"><i class="fa fa-check"></i><b>4</b> 10.D The Fundamental Welfare Theorems in a Partial Equilibrium Context</a>
@@ -103,7 +107,61 @@
             <section class="normal" id="section-">
 <div id="b-pareto-optimality-and-competitive-equilibria" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">2</span> 10.B Pareto Optimality and Competitive Equilibria<a href="b-pareto-optimality-and-competitive-equilibria.html#b-pareto-optimality-and-competitive-equilibria" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>よくある（コアミクロでやるような）パレート最適と競争均衡の定義なので一旦スキップ。</p>
+<p>セッテイングと定義・定理のみ簡単にまとめておく。</p>
+<ul>
+<li><span class="math inline">\(i = 1, ..., I\)</span> consumers</li>
+<li><span class="math inline">\(j = 1, ..., J\)</span> firms</li>
+<li><span class="math inline">\(l = 1, ..., L\)</span> goods</li>
+<li><span class="math inline">\(x_{i} = (x_{1, i}, ... x_{L, i}) \in X_{i}\)</span>: consumer <span class="math inline">\(i\)</span>’s consumption bundles</li>
+<li><span class="math inline">\(u_{i}(\cdot)\)</span>: consumer <span class="math inline">\(i\)</span>’s utility function that represents consumer <span class="math inline">\(i\)</span>’s preferences over consumption bundles</li>
+<li><span class="math inline">\(\omega_{l} \geq 0\)</span> for <span class="math inline">\(l = 1, ..., L\)</span>: endowment of good <span class="math inline">\(l\)</span></li>
+<li><span class="math inline">\(Y_{j} \subset \mathbb{R}^{L}\)</span>: firm <span class="math inline">\(j\)</span>’s production set</li>
+<li><span class="math inline">\(y_{j} = (y_{1j}, ..., y_{Lj}) \in Y_{j}\)</span>: firm <span class="math inline">\(j\)</span>’s production vector</li>
+<li>The total net amount of goo <span class="math inline">\(l\)</span> available to the economy is <span class="math inline">\(\omega_{l} + \sum_{j}y_{lj}\)</span></li>
+</ul>
+<p><strong>Definition 10.B.1</strong>
+An <em>economic allocation</em> <span class="math inline">\((x_{1}, ..., x_{I}, y_{1}, ..., y_{J})\)</span> is a specification of a consumption of vector <span class="math inline">\(x_{i} \in X_{i}\)</span> for each consumer <span class="math inline">\(i = 1, ..., I\)</span> and a production vector <span class="math inline">\(y_{j} \in Y_{j}\)</span> for each firm <span class="math inline">\(j = 1, ..., J\)</span>. The allocation <span class="math inline">\((x_{1}, ..., x_{I}, y_{1}, ..., y_{J})\)</span> is <em>feasible</em> if</p>
+<p><span class="math display">\[
+\sum_{i = 1}^{I}x_{li} \leq \omega_{l} + \sum_{j}y_{lj}
+\]</span></p>
+<div id="pareto-optimality" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Pareto Optimality<a href="b-pareto-optimality-and-competitive-equilibria.html#pareto-optimality" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Definition 10.B.2</strong>
+A feasible allocation <span class="math inline">\((x_{1}, ..., x_{I}, y_{1}, ..., y_{J})\)</span> is <em>Pareto optimal</em> if there is no other feasible allocation <span class="math inline">\((x&#39;_{1}, ..., x&#39;_{I}, y&#39;_{1}, ..., y&#39;_{J})\)</span> such that <span class="math inline">\(u_{i}(x&#39;_{i}) \geq u_{i}(x_{i})\)</span> for all <span class="math inline">\(i = 1, ..., I\)</span> and <span class="math inline">\(u_{i}(x&#39;_{i}) &gt; u_{i}(x_{i})\)</span> for some <span class="math inline">\(i\)</span></p>
+</div>
+<div id="competitive-equilibria" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Competitive Equilibria<a href="b-pareto-optimality-and-competitive-equilibria.html#competitive-equilibria" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Suppose that consumer <span class="math inline">\(i\)</span> initially owns <span class="math inline">\(\omega_{li}\)</span> of good <span class="math inline">\(l\)</span>, where <span class="math inline">\(\sum_{i}\omega_{li} = \omega_{l}\)</span></li>
+<li><span class="math inline">\(\omega_{i} = (\omega_{1i}, ..., \omega_{Li})\)</span>: consumer <span class="math inline">\(i\)</span>’s vector of endowments</li>
+<li>Suppose that consumer <span class="math inline">\(i\)</span> owns a share <span class="math inline">\(\theta_{if}\)</span> of firm <span class="math inline">\(j\)</span> (where <span class="math inline">\(\sum_{i}\theta_{ij} = 1\)</span>), giving him a claim to fraction <span class="math inline">\(\theta_{ij}\)</span> of firm <span class="math inline">\(j\)</span>’s profits</li>
+</ul>
+<p><strong>Definition 10.B.3</strong>
+The allocation <span class="math inline">\((x^{*}_{1}, ..., x^{*}_{I}, y^{*}_{1}, ..., y^{*}_{J})\)</span> and price vector <span class="math inline">\(p^{*} \in \mathbb{R}^{L}\)</span> constitute a <em>competitive equilibrium</em> if the following conditions are satisfied:</p>
+<ol style="list-style-type: decimal">
+<li><em>Profit maximization</em>: For each firm <span class="math inline">\(j\)</span>, <span class="math inline">\(y^{*}_{j}\)</span> solves</li>
+</ol>
+<p><span class="math display">\[
+\max_{y_{j} \in Y_{j}} p^{*} \cdot y_{j}
+\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li><em>Utility maximization</em>: For each consumer <span class="math inline">\(i\)</span>, <span class="math inline">\(x^{*}_{i}\)</span> solves</li>
+</ol>
+<p><span class="math display">\[
+\begin{align}
+  \max_{x_{i} \in X_{i}} u_{i}(x_{i}) \\
+  \text{s.t.} \quad p^{*} \cdot x_{i} \leq p^{*} \cdot \omega_{i} + \sum_{j = 1}^{J}\theta_{ij}(p^{*} \cdot y^{*}_{j})
+\end{align}
+\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li><em>Market clearing</em>: For each good <span class="math inline">\(l = 1, ..., L\)</span>,</li>
+</ol>
+<p><span class="math display">\[
+\sum_{i = 1}^{I}x^{*}_{li} = \omega_{l} + \sum_{j}y^{*}_{lj}
+\]</span></p>
+<p><strong>Lemma 10.B.1</strong>
+If the allocation <span class="math inline">\((x_{1}, ..., x_{I}, y_{1}, ..., y_{J})\)</span> and price vector <span class="math inline">\(p &gt;&gt; 0\)</span> satisfy the market clearing condition for all goods <span class="math inline">\(l \neq k\)</span>, and if every consumer’s budget constraint is satisfied with equality, so that <span class="math inline">\(p \cdot x_{i} = p \cdot \omega_{i} + \sum_{j = 1}^{J}\theta_{ij}(p \cdot y_{j})\)</span> for all <span class="math inline">\(i\)</span>, then the marked for good <span class="math inline">\(k\)</span> also clears</p>
+</div>
 </div>
             </section>
 

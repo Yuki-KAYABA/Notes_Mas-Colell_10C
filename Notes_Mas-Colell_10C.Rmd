@@ -20,11 +20,65 @@ library(bookdown)
 - To formally introduce and study two key concepts, the notions of _Pareto optimality_ and _competitive equilibrium_.
 - To develop a somewhat special but analytically very tractable context for the study of market equilibrium, the _partial equilibrium model_.
 
-部分均衡を重点的に確認したいので序盤のパレート最適と競争均衡の定義はスキップ（必要に応じて読み直す）。
-
 # 10.B Pareto Optimality and Competitive Equilibria
 
-よくある（コアミクロでやるような）パレート最適と競争均衡の定義なので一旦スキップ。
+セッテイングと定義・定理のみ簡単にまとめておく。
+
+- $i = 1, ..., I$ consumers
+- $j = 1, ..., J$ firms
+- $l = 1, ..., L$ goods
+- $x_{i} = (x_{1, i}, ... x_{L, i}) \in X_{i}$: consumer $i$'s consumption bundles
+- $u_{i}(\cdot)$: consumer $i$'s utility function that represents consumer $i$'s preferences over consumption bundles
+- $\omega_{l} \geq 0$ for $l = 1, ..., L$: endowment of good $l$
+- $Y_{j} \subset \mathbb{R}^{L}$: firm $j$'s production set
+- $y_{j} = (y_{1j}, ..., y_{Lj}) \in Y_{j}$: firm $j$'s production vector
+- The total net amount of goo $l$ available to the economy is $\omega_{l} + \sum_{j}y_{lj}$
+
+**Definition 10.B.1**
+An _economic allocation_ $(x_{1}, ..., x_{I}, y_{1}, ..., y_{J})$ is a specification of a consumption of vector $x_{i} \in X_{i}$ for each consumer $i = 1, ..., I$ and a production vector $y_{j} \in Y_{j}$ for each firm $j = 1, ..., J$. The allocation $(x_{1}, ..., x_{I}, y_{1}, ..., y_{J})$ is _feasible_ if
+
+$$
+\sum_{i = 1}^{I}x_{li} \leq \omega_{l} + \sum_{j}y_{lj}
+$$
+
+## Pareto Optimality
+
+**Definition 10.B.2**
+A feasible allocation $(x_{1}, ..., x_{I}, y_{1}, ..., y_{J})$ is _Pareto optimal_ if there is no other feasible allocation $(x'_{1}, ..., x'_{I}, y'_{1}, ..., y'_{J})$ such that $u_{i}(x'_{i}) \geq u_{i}(x_{i})$ for all $i = 1, ..., I$ and $u_{i}(x'_{i}) > u_{i}(x_{i})$ for some $i$
+
+## Competitive Equilibria
+
+- Suppose that consumer $i$ initially owns $\omega_{li}$ of good $l$, where $\sum_{i}\omega_{li} = \omega_{l}$
+- $\omega_{i} = (\omega_{1i}, ..., \omega_{Li})$: consumer $i$'s vector of endowments
+- Suppose that consumer $i$ owns a share $\theta_{if}$ of firm $j$ (where $\sum_{i}\theta_{ij} = 1$), giving him a claim to fraction $\theta_{ij}$ of firm $j$'s profits
+
+**Definition 10.B.3**
+The allocation $(x^{*}_{1}, ..., x^{*}_{I}, y^{*}_{1}, ..., y^{*}_{J})$ and price vector $p^{*} \in \mathbb{R}^{L}$ constitute a _competitive equilibrium_ if the following conditions are satisfied:
+
+1. _Profit maximization_: For each firm $j$, $y^{*}_{j}$ solves
+
+$$
+\max_{y_{j} \in Y_{j}} p^{*} \cdot y_{j}
+$$
+
+2. _Utility maximization_: For each consumer $i$, $x^{*}_{i}$ solves
+
+$$
+\begin{align}
+  \max_{x_{i} \in X_{i}} u_{i}(x_{i}) \\
+  \text{s.t.} \quad p^{*} \cdot x_{i} \leq p^{*} \cdot \omega_{i} + \sum_{j = 1}^{J}\theta_{ij}(p^{*} \cdot y^{*}_{j})
+\end{align}
+$$
+
+3. _Market clearing_: For each good $l = 1, ..., L$,
+
+$$
+\sum_{i = 1}^{I}x^{*}_{li} = \omega_{l} + \sum_{j}y^{*}_{lj}
+$$
+
+**Lemma 10.B.1**
+If the allocation $(x_{1}, ..., x_{I}, y_{1}, ..., y_{J})$ and price vector $p >> 0$ satisfy the market clearing condition for all goods $l \neq k$, and if every consumer's budget constraint is satisfied with equality, so that $p \cdot x_{i} = p \cdot \omega_{i} + \sum_{j = 1}^{J}\theta_{ij}(p \cdot y_{j})$ for all $i$, then the marked for good $k$ also clears
+
 
 # 10.C Parial Equilibrium Competitive Analysis
 
